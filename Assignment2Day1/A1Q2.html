@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Difference between  var,let and const</title>
+    <body>
+        <h1>Var:-The scope of a variable defined with a keyword var is limited 
+            to the function within which it is defined.
+            It is defined outside any function the scope of variable is global.
+            var a=10;
+            
+        </h1>
+       
+        <h1>Let:-The scope of a variable defined with the keyword “let” or “const” is 
+            limited to the “block” defined by curly braces i.e. {} .
+            “let” and “const” are“block scoped”.
+        let b=12;
+    </h1>
+
+        <h1>Const:-The scope of a variable defined with the keyword “const” is
+             limited to the block defined by curly braces. However if a variable 
+             is defined with keyword const, it cannot be reassigned.
+            “const” cannot be re-assigned to a new value. However it CAN be mutated.
+        const PI=3.14
+    </h1>
+    <script>
+        {
+  var a=10;
+  console.log(a);
+} //block 1
+{
+  a++;
+  console.log(a);
+} //block 2
+  const PI=3.14;
+    </script>
+            
+    </body>   
+ </head>
+</html>
