@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Ass3-day2</title>
+        <h1>Methods of string in javascript</h1>
+        <h2>1. The charAt() method returns the character at the specified index in a string.
+           The index of the first character is 0, the second character is 1, and so on.
+           <script>
+               var str = "HELLO WORLD";
+               var res = str.charAt(0);
+               console.log(res);
+               </script>
+         </h2>
+         <h2>
+            2. The concat() method is used to join two or more strings.
+            This method does not change the existing strings, 
+            but returns a new string containing the text of the joined strings.
+            <script>
+                var str1 = "Hello ";
+                var str2 = "world!";
+                var res = str1.concat(str2);
+            </script>
+         </h2>
+
+         <h2>
+            3.The match() method searches a string for a match against a regular expression, 
+            and returns the matches, as an Array object.
+            <script>
+                var str = "The rain in SPAIN stays mainly in the plain";
+                var res = str.match(/ain/g);
+            </script>
+         </h2>
+
+         <h2>
+             4.The trim() method removes whitespace from both sides of a string.
+             <script>
+                 var str = "       Hello World!        ";
+                 alert(str.trim());
+             </script>
+         </h2>
+
+         <h2>
+            5.The includes() method determines whether a string contains the characters of a specified string.
+            This method returns true if the string contains the characters, and false if not.
+            <script>
+                var str = "Hello world, welcome to the universe.";
+                var n = str.includes("world");
+                console.log(n);
+            </script>
+         </h2>
+
+         <h2>
+            6.The localeCompare() method compares two strings in the current locale.
+            The locale is based on the language settings of the browser.
+            The localeCompare() method returns a number indicating whether the string comes before, 
+            after or is equal as the compareString in sort order.
+            <script>
+                var str1 = "ab";
+                var str2 = "cd";
+                var n = str1.localeCompare(str2);
+            </script>
+            
+            
+         </h2>
+        </head>
+</html>
