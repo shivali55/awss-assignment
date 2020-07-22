@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Ass6-Q2</title>
+        <body>
+            <script>
+                class User {
+             constructor(name, age,email) 
+             {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+             }
+              
+                login()
+                {
+                console.log(`${this.name} has logged in`);
+                return this;
+                 }
+                 logout()
+                 {
+                    console.log(`${this.name} has logged out`);
+                    return this;
+                 }
+                 
+          
+                }
+                let user1 = new User('Shivali',20,'Shivali@gmail.com')
+                user1.login()
+                let user2 = new User('Shiv',21,'Shivi@gmail.com')
+
+                let users=[user1,user2];
+
+
+                class Moderator extends User{
+                    constructor(name, age,email,coins) 
+                    {
+                        super(name,age,email);
+                        this.coins=coins;
+                    }
+
+                    addcoins()
+                    {
+                        this.coins++;
+                        console.log(`${this.name} has ${this.coins} coins`);
+                        return this;
+                    }
+
+                    removecoins()
+                    {
+                        this.coins--;
+                        console.log(`${this.name} has ${this.coins} coins`);
+                        return this;
+                        
+                    }
+
+                }
+                let mod=new Moderator('shiv',34,'shiv@gmail.com');
+                
+                class admin extends Moderator {
+            constructor(name,age,email,coins,course) {
+                super(name,age,email,coins);
+                this.course=course;
+            }
+            addCourse(course) {
+                (this.course).push(course);
+                console.log('After adding course '+course);
+                this.displayAdmin();
+                return this;
+            }
+            deleteCourse(course) {
+                (this.course).unshift(course);
+                console.log('After deleting course: '+course);
+                this.displayAdmin();
+                return this;
+            }
+            displayAdmin() {
+               // console.log('$(this.name) $(this.age) $(this.email) $(this.coins) $(this.course)');
+                console.log(this.name,this.age,this.coins,this.course);
+                return this;
+            }
+        }
+        let a1 =new admin('shivali',30,'shiv@gmail.com',20,['python','js','c']); 
+        a1.login().logout().addcoins(20).removecoins(5).displayAdmin().addCourse('c++')
+            .deleteCourse('js');
+                
+            </script>
+        </body>
+    </head>
+</html>

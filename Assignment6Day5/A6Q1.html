@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Ass6-Q1</title>
+        <body>
+            <script>
+                var arr=[];
+                var n=prompt("Enter a positive number");
+                while(n)
+                {
+                    if(n>0)
+                    {
+                    arr.push(n);
+                    n=prompt("enter positive number");
+                    }
+                else n=prompt("Enter another positive number");
+                }
+                console.log(arr);
+                let odd=arr.filter(el=>el%2!=0);
+                console.log('odd nos are:'+odd)
+            </script>
+        </body>
+    </head>
+</html>

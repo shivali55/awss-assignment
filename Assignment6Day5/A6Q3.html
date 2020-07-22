@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Ass6-Q3</title>
+        <body>
+            <script>
+               let names= [
+               {
+    "userId": 4,
+    "id": 1,
+    "title": "selected either the",
+    "completed" : false
+  },
+  {
+    "userId": 5,
+    "id": 2,
+    "title": "Who will be easy for those services",
+    "completed" : false
+  },
+  {
+    "userId": 1,
+    "id": 14,
+    "title": "repellendus sunt dolores architecto voluptatum",
+    "completed": true
+  },
+  {
+    "userId": 1,
+    "id": 15,
+    "title": "ab voluptatum amet voluptas",
+    "completed": true
+  }
+               ]
+               
+               function createUser(user)
+               {
+                setTimeout(()=>{
+                names.push(user);},3000);
+                }
+                
+                function getUsers(){
+                setTimeout(()=>{
+                let result = '';
+                names.forEach(user=>{
+                result += `The user is ${user.userId} \n`;
+                });
+                console.log(result);
+                },1000);
+                }
+
+                getUsers();
+
+                function createUser(user){
+                return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                names.push(user);
+
+               const error = true;
+
+                if(!error){
+                 resolve();
+                 }
+                 else{
+                 reject("Oops an error occured");
+                  }
+
+                 }, 3000);
+                 })
+                 }
+                 createUser({userId:6,id:7,title:'hshshs',completed:'false'}).then(getUsers)
+                 .catch(error=>console.log(error));
+
+
+            //Async/await
+
+            let users=[
+            {
+    "userId": 2,
+    "id": 33,
+    "title": "sint sit aut vero",
+    "completed": false
+  },
+  {
+    "userId": 2,
+    "id": 34,
+    "title": "porro aut necessitatibus eaque distinctio",
+    "completed": false
+  },
+  {
+    "userId": 2,
+    "id": 35,
+    "title": "repellendus veritatis molestias dicta incidunt",
+    "completed": true
+  },
+  {
+    "userId": 2,
+    "id": 36,
+    "title": "excepturi deleniti adipisci voluptatem et neque optio illum ad",
+    "completed": true
+  }
+            ]
+
+            
+async function addusers(){
+    let status = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            users.push('shivali');
+            resolve('user added');
+        },3000)
+    })
+
+    let result = await status;
+    console.log(users.length);
+}
+
+//addusers();
+addusers();
+addusers()
+
+            </script>
+            
+        </body>
+    </head>
+</html>
